@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/fullscreen_content_controls"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:id="@+id/controlLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@android:color/holo_blue_bright"
+            android:orientation="vertical" >
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:keepScreenOn="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ctl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:background="@color/colorPrimary" >
+
+            <EditText
+                android:layout_marginStart="13dp"
+                android:id="@+id/urlText"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent"
+android:textColor="@android:color/white"
+                android:ems="15"
+                android:hint="Ketik URL Disini"
+                android:imeOptions="actionGo"
+                android:inputType="textUri|textNoSuggestions"
+                android:singleLine="true"
+                android:text="http://www."/>
+
+            <Button
+                android:id="@+id/buttonGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="GO"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+

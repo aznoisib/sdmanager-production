@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/groupdial"
+    android:background="@drawable/dialogrounded"
+    >
+
+    <ImageView
+        android:tint="@android:color/white"
+        android:id="@+id/icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_file_download"
+        android:contentDescription="TODO" />
+    <ImageView
+        android:background="@drawable/ripple"
+        android:clickable="true"
+        android:tint="@android:color/white"
+        android:id="@+id/browse"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_public"
+        android:contentDescription="TODO"
+        android:focusable="true" />
+    <TextView
+        android:textStyle="bold|italic"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:id="@+id/sTitle"
+        android:text="SDM"
+        android:layout_toEndOf="@id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:visibility="invisible"
+        android:indeterminateTint="@android:color/white"
+        android:indeterminateTintMode="src_in"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sTitle"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+    <TextView
+        android:id="@+id/sizes"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/sTitle"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TableLayout
+        android:id="@+id/tableLayouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:layout_marginTop="34dp"
+
+        >
+
+        <TableRow
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:textColor="@android:color/white"
+                android:gravity="start"
+                android:text="Link" />
+
+            <EditText
+                style="@style/dialogEditText"
+
+                android:id="@+id/fileLink"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:textColor="@android:color/white"
+                android:gravity="start"
+                android:text="Name" />
+
+            <EditText
+                style="@style/dialogEditText"
+                android:id="@+id/fileName"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text" />
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:textColor="@android:color/white"
+                android:gravity="start"
+                android:text="Path" />
+
+            <EditText
+                style="@style/dialogEditText"
+                android:textIsSelectable="true"
+                android:focusable="false"
+                android:ems="10"
+                android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:drawableEnd="@drawable/ic_folder"
+                android:id="@+id/filePath"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </TableRow>
+
+        <TableRow android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button_cancel_user_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+
+                    android:id="@+id/button_save_user_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"/>
+
+            </RelativeLayout>
+
+
+        </TableRow>
+
+    </TableLayout></RelativeLayout>
